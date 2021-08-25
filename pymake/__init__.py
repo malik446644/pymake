@@ -1,0 +1,2 @@
+def malik():
+    print("malik")
