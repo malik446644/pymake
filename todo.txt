@@ -1,0 +1,1 @@
+make a function that executes a terminal command based on if a file exists or its older than its dependant file
