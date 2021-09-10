@@ -1,3 +1,4 @@
 import pymake as pm
 
-pm.malik()
+pm.mkdir("tmp")
+pm.mkdir("bin")
