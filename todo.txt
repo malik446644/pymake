@@ -1,1 +1,4 @@
-make a function that executes a terminal command based on if a file exists or its older than its dependant file
+multiple cmd function definition for executing commands without checking files 
+developing args system to execute only parts of the pymake.py file (example: cleaning files)
+develope easy delete function to delete files or folders
+function that gets all names of source files without the prefix to automatically add it to src_names variable easily 
