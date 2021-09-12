@@ -1,2 +1,1 @@
-function that gets all names of source files without the prefix to automatically add it to src_names variable easily 
-making a function that returns an array with the names of files in a folder
+making a function that checks a folder for source ".c" files and returns two arrays: <src_names> and <src_names_with_path>

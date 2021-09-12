@@ -17,7 +17,7 @@ def mkdir(new_directory_name):
     except:
         print("[WARNING] " + new_directory_name + " folder already exist")
 
-def fcmd(source_file, dependant_file, cmd_arr):
+def dcmd(source_file, dependant_file, cmd_arr):
     """executing shell command if the dependant file is older than the source file"""
 
     # getting the project folder full path 
@@ -82,3 +82,14 @@ def add_str_to_arr_elements(arr, before_str, after_str):
     for item in arr:
         arr2.append(before_str + item + after_str)
     return arr2
+
+def get_names_by_type(path):
+    src_names = []
+    src_names_with_path = []
+    for root, dirs, files in os.walk(path, topdown=False):
+        if (root == path): root = ""
+        for name in files:
+            print(f'<{name}> lives in "{root}"')
+            src_names.append(name)
+            src_names_with_path.append(os.path.join(root, name))
+    return (src_names, src_names_with_path)

@@ -8,21 +8,22 @@ if (len(sys.argv) == 1):
     pm.mkdir("bin")
 
     # names of the source files
-    src_names = ["main"]
+    src_names, src_names_with_path = pm.get_names_by_type("src")
 
     # compiling the source files
     print("\n>>>>>>>>>>>>    COMPILING    <<<<<<<<<<<<")
-    pm.fcmd(
-        f"src/{src_names[0]}.c",
-        f"tmp/{src_names[0]}.o", 
-        [
-            "gcc", 
-            "-c", 
-            "-o", 
-            f"tmp/{src_names[0]}.o", 
-            f"src/{src_names[0]}.c"
-        ]
-    )
+    for i in range(len(src_names)):
+        pm.dcmd(
+            f"{src_names_with_path[i]}.c",
+            f"tmp/{src_names[i]}.o", 
+            [
+                "gcc", 
+                "-c", 
+                "-o", 
+                f"tmp/{src_names[i]}.o", 
+                f"{src_names_with_path[i]}.c"
+            ]
+        )
 
     # linking the object files
     print("\n>>>>>>>>>>>>    LINKING    <<<<<<<<<<<<")
@@ -32,8 +33,7 @@ if (len(sys.argv) == 1):
             "gcc", 
             "-o", 
             "bin/app.exe", 
-            " ".join(names_with_path)
-        ]
+        ] + names_with_path
     )
 
 elif ("clean" in sys.argv):
