@@ -1,6 +1,9 @@
 import sys
 import pymake as pm
 
+#---------------------------------------------------------------------------------------------#
+# if no arguments were given only this part of the code will work when you execute this file. #
+#---------------------------------------------------------------------------------------------#
 if (len(sys.argv) == 1):
     # creating two important files
     print("\n>>>>>>>>>>>>    CREATING FOLDERS    <<<<<<<<<<<<")
@@ -35,7 +38,10 @@ if (len(sys.argv) == 1):
             "bin/app.exe",
         ] + names_with_path
     )
-
+    
+#---------------------------------------------------------------------------------------------------------#
+# if "clean" argument was given when executing this file then only this part of the code will be executed #
+#---------------------------------------------------------------------------------------------------------#
 elif ("clean" in sys.argv):
     print("\n>>>>>>>>>>>>    CLEANING    <<<<<<<<<<<<")
     pm.rmdir("bin")
