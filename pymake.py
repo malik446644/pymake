@@ -8,7 +8,7 @@ if (len(sys.argv) == 1):
     pm.mkdir("bin")
 
     # names of the source files
-    src_names, src_names_with_path = pm.get_names_by_type("src")
+    src_names, src_names_with_path = pm.get_names_by_type("src", ".c")
 
     # compiling the source files
     print("\n>>>>>>>>>>>>    COMPILING    <<<<<<<<<<<<")
@@ -30,9 +30,9 @@ if (len(sys.argv) == 1):
     names_with_path = pm.add_str_to_arr_elements(src_names, "tmp/", ".o")
     pm.cmd(
         [
-            "gcc", 
-            "-o", 
-            "bin/app.exe", 
+            "gcc",
+            "-o",
+            "bin/app.exe",
         ] + names_with_path
     )
 

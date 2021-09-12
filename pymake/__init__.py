@@ -78,18 +78,28 @@ def rmindir(folder_path):
 
 def add_str_to_arr_elements(arr, before_str, after_str):
     """adding string before and after every string item in an array of strings"""
+
     arr2 = []
     for item in arr:
         arr2.append(before_str + item + after_str)
     return arr2
 
-def get_names_by_type(path):
+def remove_name_ext(file_name):
+    """remove file name extension"""
+
+    string = file_name[:file_name.rfind('.')]
+    return string
+
+def get_names_by_type(path, file_extension):
+    """gets all files names and names + paths with the provided extension within a directory"""
+
     src_names = []
     src_names_with_path = []
     for root, dirs, files in os.walk(path, topdown=False):
-        if (root == path): root = ""
+        # if (root == path): root = ""
         for name in files:
-            print(f'<{name}> lives in "{root}"')
-            src_names.append(name)
-            src_names_with_path.append(os.path.join(root, name))
+            if (file_extension in name):
+                src_names.append(remove_name_ext(name))
+                src_names_with_path.append(os.path.join(root, remove_name_ext(name)))
+            
     return (src_names, src_names_with_path)

@@ -1,1 +1,0 @@
-making a function that checks a folder for source ".c" files and returns two arrays: <src_names> and <src_names_with_path>
