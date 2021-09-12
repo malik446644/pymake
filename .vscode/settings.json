@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "*.cpp": "cpp",
+        "second.h": "c",
+        "third.h": "c"
+    }
+}
