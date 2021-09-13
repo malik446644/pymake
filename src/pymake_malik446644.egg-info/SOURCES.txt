@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/pymake/__init__.py
+src/pymake_malik446644.egg-info/PKG-INFO
+src/pymake_malik446644.egg-info/SOURCES.txt
+src/pymake_malik446644.egg-info/dependency_links.txt
+src/pymake_malik446644.egg-info/top_level.txt
