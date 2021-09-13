@@ -96,7 +96,6 @@ def get_names_by_type(path, file_extension):
     src_names = []
     src_names_with_path = []
     for root, dirs, files in os.walk(path, topdown=False):
-        # if (root == path): root = ""
         for name in files:
             if (file_extension in name):
                 src_names.append(remove_name_ext(name))

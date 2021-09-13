@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: pymake-malik446644
-Version: 1.0.0
+Name: pymake
+Version: 0.0.1
 Summary: c/c++ build library in python
 Home-page: https://github.com/pypa/sampleproject
 Author: malik najjar
