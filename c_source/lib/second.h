@@ -1,1 +1,0 @@
-int multiply(int num, int num2);

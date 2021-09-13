@@ -2,7 +2,8 @@ LICENSE
 README.md
 pyproject.toml
 setup.cfg
-src/pymake/__init__.py
+setup.py
+src/pymake.py
 src/pymake.egg-info/PKG-INFO
 src/pymake.egg-info/SOURCES.txt
 src/pymake.egg-info/dependency_links.txt
