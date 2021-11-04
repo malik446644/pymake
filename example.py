@@ -29,14 +29,14 @@ if (len(sys.argv) == 1):
     print("\n>>>>>>>>>>>>    COMPILING    <<<<<<<<<<<<")
     for i in range(len(src_names)):
         pm.dcmd(
-            f"{src_names_with_path[i]}{source_file_extension}",
+            f"{src_names_with_path[i]}{source_files_extension}",
             f"tmp/{src_names[i]}.o", 
             [
                 compiler, 
                 "-c", 
                 "-o", 
                 f"tmp/{src_names[i]}.o", 
-                f"{src_names_with_path[i]}{source_file_extension}",
+                f"{src_names_with_path[i]}{source_files_extension}",
                 "-I./libraries/GLFW/include",
                 "-ID:/VulkanSDK/1.2.176.1/Include",
                 "-I./libraries/GLM",
